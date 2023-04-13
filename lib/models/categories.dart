@@ -12,9 +12,12 @@ class Categories extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Instant Meals'),
+        title: Text('Instant Meals',
+        style: Theme.of(context).textTheme.titleMedium,
+        ),
       ),
       body: GridView(
+        padding: EdgeInsets.all(25),
         children: DUMMY_CATEGORIES.map((catdata) {
           return CategoryItem(catdata.title, catdata.color);
         }).toList(),

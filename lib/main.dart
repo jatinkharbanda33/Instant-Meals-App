@@ -15,7 +15,16 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
+        accentColor: Colors.amber,
+        canvasColor: Color.fromRGBO(255, 254, 229, 1),
+        textTheme: ThemeData.light().textTheme.copyWith(
+          titleMedium: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontFamily: 'RobotoCondensed'
+          )
+
+        ),
       ),
       home: Categories(),
     );
