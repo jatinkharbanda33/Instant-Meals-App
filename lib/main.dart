@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
       ),
       home: Categories(),
       routes:{
-        '/categorymealscreen' : (ctx)=>CatScreen(),
+        CatScreen.mealscreenroute : (ctx)=>CatScreen(),
       },
     );
   }

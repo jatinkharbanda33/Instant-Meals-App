@@ -8,7 +8,7 @@ class CategoryItem extends StatelessWidget {
   final Color color;
   CategoryItem(this.title, this.color);
   void categoryscreen(BuildContext ctx) {
-    Navigator.of(ctx).pushNamed('/categorymealscreen', arguments: {'title': this.title});
+    Navigator.of(ctx).pushNamed(CatScreen.mealscreenroute, arguments: {'title': this.title});
   }
 
   @override
