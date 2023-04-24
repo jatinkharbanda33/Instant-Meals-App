@@ -19,7 +19,7 @@ class Categories extends StatelessWidget {
       body: GridView(
         padding: EdgeInsets.all(25),
         children: DUMMY_CATEGORIES.map((catdata) {
-          return CategoryItem(catdata.title, catdata.color);
+          return CategoryItem(catdata.title, catdata.color,catdata.id);
         }).toList(),
         
         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(

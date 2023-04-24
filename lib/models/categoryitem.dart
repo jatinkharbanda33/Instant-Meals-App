@@ -6,9 +6,11 @@ import './Categorymealscreen.dart';
 class CategoryItem extends StatelessWidget {
   final String title;
   final Color color;
-  CategoryItem(this.title, this.color);
+  final String label;
+  CategoryItem(this.title, this.color,this.label);
   void categoryscreen(BuildContext ctx) {
-    Navigator.of(ctx).pushNamed(CatScreen.mealscreenroute, arguments: {'title': this.title});
+    Navigator.of(ctx)
+        .pushNamed(CatScreen.mealscreenroute, arguments: {'title': this.title , 'id':this.label});
   }
 
   @override
