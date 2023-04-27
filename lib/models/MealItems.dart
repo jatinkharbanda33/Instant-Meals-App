@@ -36,8 +36,60 @@ class Mealitem extends StatelessWidget {
                   borderRadius: BorderRadius.only(topLeft: Radius.circular(15),topRight: Radius.circular(15)),
                   child: Image.network(imageurl,height: 250,width: double.infinity,fit: BoxFit.cover)    ,         
                 ),
+                Positioned(
+                  bottom: 20,
+                  right: 10,
+                  child: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 5,vertical: 5),
+                    width: 300,
+                    color: Colors.black54,
+                    child: Text(title, 
+                    style: TextStyle(fontSize: 26 ,color: Colors.white
+                    ),
+                    softWrap: true,
+                    overflow: TextOverflow.fade,
+                    )
+                    
+                    ,
+                  ),
+                )
+
                 
               ],
+              
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Row(
+                    children: [
+                      Icon(Icons.schedule),
+                      SizedBox(height: 4),
+                      Text('$duration min'),
+
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Icon(Icons.schedule),
+                      SizedBox(height: 4),
+                      Text('$duration min'),
+
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Icon(Icons.schedule),
+                      SizedBox(height: 4),
+                      Text('$duration min'),
+
+                    ],
+                  ),
+            
+                ],
+              ),
             )
           ],
         ),
