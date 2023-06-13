@@ -1,38 +1,29 @@
 import 'package:flutter/material.dart';
-import 'Screens/categoriesscreen.dart';
-import 'Screens/Categorymealscreen.dart';
-import 'dart:ui';
+import 'package:google_fonts/google_fonts.dart';
+
+import 'package:meals/screens/tabs.dart';
+
+final theme = ThemeData(
+  useMaterial3: true,
+  colorScheme: ColorScheme.fromSeed(
+    brightness: Brightness.dark,
+    seedColor: const Color.fromARGB(255, 131, 57, 0),
+  ),
+  textTheme: GoogleFonts.latoTextTheme(),
+);
+
 void main() {
-  runApp(const MyApp());
+  runApp(const App());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class App extends StatelessWidget {
+  const App({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        
-        primarySwatch: Colors.green,
-        accentColor: Colors.amber,
-        canvasColor: Color.fromRGBO(255, 254, 229, 1),
-        textTheme: ThemeData.light().textTheme.copyWith(
-          titleMedium: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontFamily: 'RobotoCondensed'
-          )
-
-        ),
-      ),
-      home: Categories(),
-      routes:{
-        CatScreen.mealscreenroute : (ctx)=>CatScreen(),
-      },
+      theme: theme,
+      home: const TabsScreen(),
     );
   }
 }
-
-
